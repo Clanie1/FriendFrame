@@ -1,0 +1,64 @@
+.topnav a {
+    float: left;
+    color: #ECECEC;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: bold;
+    background: none;
+    padding:16px;
+    padding-top: 10px;
+    margin-right: 16px;
+    margin-left: 18px;
+  
+    }
+  
+.topnav a:hover {
+    background:none;
+    color: black;
+}
+  
+.topnav a.active {
+    font-style: italic;
+    font-family: 'Archivo', sans-serif;
+    text-decoration: underline;
+}
+  
+.search-container {
+    float: right;
+  
+}
+
+.search-container input[type=text] {   
+      padding-top:5px;
+      font-size: 17px;
+      border: none;
+      font-family: 'Khula', sans-serif;
+      border-radius: 30px;
+      padding-left: 10px;
+      padding-right: 30px;
+}
+ 
+@media screen and (max-width:100px) {
+    .search-container input[type=text] {
+      float:none;
+      display:flex;
+      text-align: left;
+      margin:0;
+    }
+}
+
+.titulo {
+      height:20px;
+      text-align: right;
+      padding-bottom: 7px;
+      font-family: 'Montserrat', sans-serif;
+      font-size:25px;
+      color:black;
+      flex-grow:0.9;
+      background: none;
+      margin-right: 15px;
+      float:right;
+      z-index: 3;
+}
