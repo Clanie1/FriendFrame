@@ -6,7 +6,7 @@
 
 nav{
     background-color: #FFFFFF;
-    height: 15vh;
+    height: 10vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -77,25 +77,25 @@ nav input{
 }
 
 
-
 #logout{
     width: 25%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     padding: 0 15px;
     text-align: center;
 }
 
-.avatar {
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
+.avatar{
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    margin: 0 10px;
 }
 
 #logout i{
     color: red;
+    margin: 0 15px;
 }
 
 main{
@@ -113,8 +113,8 @@ main{
     border: rebeccapurple solid 1px;
     position: fixed;
     left: 0;
-    top: 15vh;
-    height: 85vh;
+    top: 10vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
 }
@@ -129,6 +129,7 @@ main{
     justify-content: center;
     flex-direction: column;
     padding-top: 10px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 #profile .banner{
@@ -175,13 +176,12 @@ main{
 
 /*Feed*/
 #feed{
-    margin-top: 15vh;
+    margin-top: 10vh;
     width: 45%;
     padding: 1.6%;
     border: aqua solid 1px;
-    height: 200vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 #newPost{
@@ -193,6 +193,7 @@ main{
     align-items: center;
     padding: 10px;
     border-radius: 25px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 #newPost img{
@@ -202,14 +203,14 @@ main{
 }
 
 .newPostInputs{
-    width: 85%;
+    width: 65%;
 }
 
-.newPostMessage{
+#tweetPostInput{
     width: 100%;
 }
 
-#newPostMessage input{
+#tweetPostInput input{
     width: 100%;
     border-radius: 50px;
     padding: 5px;
@@ -218,7 +219,110 @@ main{
     background-color: #F6F6F6;
 }
 
+#tipoDePost{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#tipoDePost select{
+    margin-top: 5px;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#postingConfig{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#mierdon{
+    width: 80%;
+}
+
+#postingConfig label{
+    width: 10%;
+} 
+
+#postingConfig input{
+    width: 70%;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+#postingConfig button{
+    padding: 7px;
+    width: 70px;
+    background: #0866FF;
+    color: #FFFFFF;
+    font-weight: bolder;
+    word-spacing: 2px;
+    border-radius: 10px;
+    border: 0;
+}
+
+#postingConfig button:hover{
+    background: #0861F2;
+    cursor: pointer;
+}
+
+.tweet{
+    width: 95%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.postHeader{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+.postHeader i{
+    color: #B4B4B4;
+    margin: 0 5px;
+}
+
+.postHeader h3{
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.postHeader img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.tweet .tweetContent{
+    margin: 10px;
+    font-size: 18px;
+}
+
+.tweet .imagePost{
+    width: 100%;
+    border-radius: 25px;
+    margin: 10px 0;
+}
+
+.tweet .date{
+    margin: 10px;
+    font-size: 12px;
+    color: #B4B4B4;
+
+}
 
 
 /*Activity*/
@@ -226,21 +330,54 @@ main{
     width: 22.5%;
     padding: 1.6%;
     position: fixed;
-    top: 15vh;
+    top: 10vh;
     height: 85vh;
     border: blue solid 1px;
     right: 0;
 }
 
 
-@media (max-width: 880px) {
+@media (max-width: 900px) {
     #nav-buttons{
         display: none;
     }
     #logo{
-        width: 60%;
+        width: 85%;
     }
-    #logout{
+    #logo h1{
+        font-size: 20px;
         width: 30%;
     }
+    #logout{
+        width: 15%;
+    }
+    #logout h3{
+        display: none;
+    }
+    #suggested{
+        display: none;
+    }
+    #profilePreview{
+        width: 30%;
+    }
+    #feed{
+        width: 60%;
+    }
+    main{
+        justify-content: flex-end;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #profilePreview{
+        display: none;
+    }
+    #feed{
+        width: 90%;
+    }
+    main{
+        justify-content: center;
+    }
+
 }

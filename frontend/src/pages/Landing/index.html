@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Nigga Wat</title>
+    <title>Nibba Wat</title>
 </head>
 <body>
       <nav>
@@ -21,14 +21,14 @@
         </div>
 
         <div id="nav-buttons">
-          <a href=""><i class="fa-solid fa-house fa-2xl"></i></a>
-          <a href=""><i class="fa-regular fa-compass fa-2xl"></i></a>
+          <a href=""><i class="fa-solid fa-house fa-xl"></i></a>
+          <a href=""><i class="fa-regular fa-compass fa-xl"></i></a>
         </div>
 
         <div id="logout">
           <img src="img/importanteNOBORRAR.jpg" alt="Avatar" class="avatar">
-          <h3 id="name">Diego López Magdaleno</h3>
-          <a href=""><i class="fa-solid fa-right-from-bracket fa-2xl"></i></a>
+          <h3 id="name">Diego Lopez</h3>
+          <a href=""><i class="fa-solid fa-right-from-bracket fa-xl"></i></a>
         </div>
 
       </nav>
@@ -39,20 +39,16 @@
           <div id="profile">
             <img src="img/bannerExample.jpg" alt="userBanner" class="banner">
             <img src="img/importanteNOBORRAR.jpg" alt="userPic" class="pic">
-            <h3>Diego López</h3>
+            <h3>Diego Lopez</h3>
             <h4>@pecezon</h4>
             <div class="profileStats">
               <div class="posts">
                 <h3>33</h3>
-                <p>Posts</p>
+                <p>Images</p>
               </div>
               <div class="followers">
                 <h3>250</h3>
-                <p>Followers</p>
-              </div>
-              <div class="following">
-                <h3>666</h3>
-                <p>Following</p>
+                <p>Tweets</p>
               </div>
             </div>
           </div>
@@ -62,29 +58,66 @@
           <div id="newPost">
             <img src="img/importanteNOBORRAR.jpg" alt="userPic">
             <div class="newPostInputs">
-              
-              <div id="newPostMessage">
-                <input type="text" name="">
+
+              <div id="tweetPostInput">
+                <input type="text" name="" id="tweetAPostear">
               </div>
 
-              <input type="file" id="myfile" name="myfile">
+              <div id="imagePostInput"  style="display: none;">
+                <input type="file" id="myfile" name="myfile">
+              </div>
 
-              <label for="publisher">From:</label>
-              <input list="publisher" name="publisher">
-              <datalist id="publisher">
-                <option value="You">
-                <option value="Anonymous">
-              </datalist>
-
-              <label for="receiver">To:</label>
-              <p>@</p><input type="text" name="receiver">
+              <div id="postingConfig">
+                <div id="mierdon">
+                  <label for="userToPost">To: @</label>
+                  <input type="text" name="userToPost">
+                </div>
+                <button onclick="publicaMamada()" id="postButton">Post</button>
+              </div>
+              
+            </div>
+            <div id="tipoDePost">
+              <label for="postType">Post Type:</label>
+              <select name="Post Type" id="postType" onclick="Estupidez()">
+                <option value="Tweet">Tweet</option>
+                <option value="Image">Image</option>
+              </select>
             </div>
           </div>
+  
+          <div class="tweet">
+            <div class="postHeader">
+              <img src="img/danielPFP.jpg" alt="userPic" class="pic">
+              <h3>Daniel Barocio</h3>
+              <i class="fa-solid fa-caret-left fa-xl"></i>
+              <img src="img/juanPFP.jpg" alt="userPic" class="pic">
+              <h3>Juan Manuel</h3>
+            </div>
+            <p class="tweetContent">Me suda la polla</p>
+            <p class="date">8:04 · 08/11/2023</p>
+          </div>
+
+          <div class="tweet">
+            <div class="postHeader">
+              <img src="img/ivanPFP.jpg" alt="userPic" class="pic">
+              <h3>Ivan Mijares</h3>
+              <i class="fa-solid fa-caret-left fa-xl"></i>
+              <img src="img/kamilaPFP.jpg" alt="userPic" class="pic">
+              <h3>Kamila con K</h3>
+            </div>
+            <img src="img/goofyAhhNwords.jpeg" alt="pendejosidiotasposando" class="imagePost">
+            <p class="date">8:04 · 08/11/2023</p>
+          </div>
+
         </div>
 
         <div id="suggested">
           <p>pitito</p>
         </div>
+
+
       </main>
+
+      <script src="script.js"></script>
 </body>
 </html>
