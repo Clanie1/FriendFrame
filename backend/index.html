@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supabase API con Flask</title>
+</head>
+<body>
+    <h1>Datos de Supabase</h1>
+    <ul id="data-list"></ul>
+
+    <script>
+        // Hacer una solicitud a la API Flask
+        fetch('/api/data')
+            .then(response => response.json())
+            .then(data => {
+                const dataList = document.getElementById('data-list');
+                data.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = JSON.stringify(item);
+                    dataList.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
